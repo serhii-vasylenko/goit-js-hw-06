@@ -10,18 +10,18 @@ const divParrent = document.querySelector("#boxes");
 
 const width = 30;
 const height = 30;
+countBoxesInput.value = "0";
 
 createBtn.addEventListener("click", () => {
   boxes.innerHTML = "";  
   createBoxes(countBoxesInput.value);
-  // countBoxesInput.value = "0";
 });
 
 destroyBtn.addEventListener("click", () => {
   // const boxes = document.querySelector("#boxes").children;
   // [...boxes].forEach((box) => box.remove());
   boxes.innerHTML = "";
-  countBoxesInput.value = "";
+  countBoxesInput.value = "0";
 });
 
 function createBoxes(amount) {  
