@@ -34,6 +34,7 @@ img {
   gap: 30px;
 
   list-style: none;
+  padding-left: 0;
 }
 
 .gallery li {
