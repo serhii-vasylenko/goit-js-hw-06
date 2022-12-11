@@ -13,7 +13,7 @@ const height = 30;
 countBoxesInput.value = "0";
 
 createBtn.addEventListener("click", () => {
-  boxes.innerHTML = "";  
+  boxes.innerHTML = "";
   createBoxes(countBoxesInput.value);
 });
 
@@ -24,12 +24,15 @@ destroyBtn.addEventListener("click", () => {
   countBoxesInput.value = "0";
 });
 
-function createBoxes(amount) {  
+function createBoxes(amount) {
+  const elements = [];
   for (let i = 1; i <= amount; i += 1) {
-    const childDiv = document.createElement('div');
+    const childDiv = document.createElement("div");
     childDiv.style.backgroundColor = `${getRandomHexColor()}`;
     childDiv.style.width = `${width + 10 * i}px`;
     childDiv.style.height = `${height + 10 * i}px`;
-    divParrent.append(childDiv);
+    elements.push(childDiv);
   }
+
+  divParrent.append(...elements);
 }
