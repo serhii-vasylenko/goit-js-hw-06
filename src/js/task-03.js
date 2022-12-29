@@ -30,5 +30,5 @@ const imagesUl = document.querySelector(".gallery");
 // v2.2
 imagesUl.insertAdjacentHTML(
   "beforeend",
-  images.map((image) => `<li><img src="${image.url}" alt="${image.alt}" ></li>`)
+  images.map(({url, alt}) => `<li><img src="${url}" alt="${alt}" ></li>`)
 );
